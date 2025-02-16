@@ -79,6 +79,7 @@ class Program
             }
             else break;
         }
+        Console.WriteLine($"{_cities.First().Key}: {string.Join(", ", _cities.First().Value.Item1)}");
         _printingData = false;
     }
 
