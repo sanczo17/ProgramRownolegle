@@ -57,10 +57,9 @@ class Program
     double CalculateMedian(double[] temperatures)
     {
         double[] sortedTemp = temperatures.OrderBy(t => t).ToArray();
-        int mid = sortedTemp.Length / 2;
         return (sortedTemp.Length % 2 == 0)
-            ? (sortedTemp[mid - 1] + sortedTemp[mid]) / 2.0
-            : sortedTemp[mid];
+            ? (sortedTemp[sortedTemp.Length / 2 - 1] + sortedTemp[sortedTemp.Length / 2]) / 2.0
+            : sortedTemp[sortedTemp.Length / 2];
     }
 
     void PrintData()
